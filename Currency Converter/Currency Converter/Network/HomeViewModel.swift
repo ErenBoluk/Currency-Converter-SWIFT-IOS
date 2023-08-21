@@ -18,14 +18,7 @@ class HomeViewModel {
         // Closure
         let task = session.dataTask(with: url!) { ( data, response, error) in
             
-            if error != nil{
-             /*   let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: UIAlertController.Style.alert)
-                let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil )
-                alert.addAction(okButton)
-                self.present(alert, animated: true)
-                */
-            }else{
-                
+            if error == nil{
                 // 2.
                 if data != nil{
                     do {
@@ -40,15 +33,7 @@ class HomeViewModel {
                                     }
                                 }
                             }
-                                    
-                                  /*  DispatchQueue.main.async {
-                                        let alert = UIAlertController(title: "Api Error", message: "Api bağlantısında bir sorun oluştu", preferredStyle: .alert)
-                                        let btn = UIAlertAction(title: "Tamam :<", style: .destructive)
-                                        alert.addAction(btn)
-                                        
-                                        self.present(alert, animated: true)
-                                    }*/
-                                
+                            
                         
                         }
                     } catch {
